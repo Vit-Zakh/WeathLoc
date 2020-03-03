@@ -11,17 +11,17 @@ import java.util.List;
 public class LocationsViewModel extends AndroidViewModel {
 
     private LocationsRepo locationsRepo;
-    private LiveData<List<WethLoc>> allWethLocs;
+    private LiveData<List<WeathLoc>> allWethLocs;
 
     public LocationsViewModel(@NonNull Application application) {
         super(application);
         locationsRepo = new LocationsRepo(application);
-        allWethLocs = locationsRepo.getAllWethLocs();
+        allWethLocs = locationsRepo.getAllWeathLocs();
     }
-    LiveData<List<WethLoc>> getAllWethLocs(){
+    LiveData<List<WeathLoc>> getAllWethLocs(){
         return allWethLocs;
     }
-    public void insert(WethLoc wethLoc){
-        locationsRepo.insert(wethLoc);
+    public void insert(WeathLoc weathLoc){
+        locationsRepo.insert(weathLoc);
     }
 }
